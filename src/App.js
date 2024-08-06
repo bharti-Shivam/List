@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import Product from './Component/Product';
 import './App.css';
 
 function App() {
+
+  const Items = [
+    {
+      id : 1,
+      itemName : "Wheatflour",
+      amount : 400,
+      date : new Date(2024 ,2, 15)
+    },
+    {
+      id : 1,
+      itemName : "Wheatflour",
+      amount : 400,
+      date : new Date(2024 ,2, 15)
+    },
+    {
+      id : 1,
+      itemName : "Wheatflour",
+      amount : 400,
+      date : new Date(2024 ,2, 15)
+    },
+    {
+      id : 1,
+      itemName : "Wheatflour",
+      amount : 400,
+      date : new Date(2024 ,2, 15)
+    }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="APP">
+      <Product item={Items}/>
     </div>
   );
 }
