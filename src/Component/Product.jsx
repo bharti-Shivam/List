@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./Product.css";
 
 
 const Product = () => {
@@ -32,17 +33,18 @@ const Product = () => {
 
 
   return (
-    <div className="ProductItems">  
+    <div style={{width:"100%",display:"flex",flexDirection:"column",gap:"1rem",margin:"1rem 1rem"}}>  
       {items.map((val)=>(
-        <div key={val.id}>
-          <div className='productdate'>
-           <p>{val.date.toLocaleString("en-us",{month:"long"})}</p>
-           <p>{val.date.getFullYear()}</p>
-           <p>{val.date.toLocaleString("en-us",{day:"2-digit"})}</p>
+        <div className='ProductItems' key={val.id}>
+          <div>
+            <div className='productdate'>
+             <p>{val.date.toLocaleString("en-us",{month:"long"})}</p>
+             <p>{val.date.getFullYear()}</p>
+             <p>{val.date.toLocaleString("en-us",{day:"2-digit"})}</p>
+            </div>
           </div>
-          <div className="productitle">
-            <p>{val.itemName}</p>
-            <p>{val.amount}</p>
+          <div className="productitle" style={{marginRight:"10px"}}>
+            <p style={{fontSize:"bolder"}}>{val.itemName}</p>
           </div>
         </div>
       ))}
